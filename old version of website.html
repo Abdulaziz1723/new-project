@@ -1,0 +1,582 @@
+<!--created by abdulaziz-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ethio food compaby</title>
+    <link rel="stylesheet" href="food.css">
+    <style>
+       /*created by abdulaziz*/
+body
+{
+    margin: 0px;
+}
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+ }
+.header
+{ 
+    width: 100%;
+    height: 120px;
+    background-image: url("a.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:abs 30s linear infinite;
+}
+#a
+{
+    font-family: fantasy;
+    color: transparent;
+    border: 2px gray solid;
+    border-radius: 25px 3px 25px 3px ;
+    padding: 10px;
+    background: linear-gradient(45deg,black,red,blue,red,black);
+    background-clip: text;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    flex-wrap: nowrap;
+}
+.main
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.c
+{
+    width: 400px;
+    max-width: 85%;
+    min-height: 360px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    border: 1px double black;
+    border-radius: 16px 16px 0px 0px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 32%;
+}
+.c:hover
+{
+    box-shadow: 5px 5px 5px   rgb(96, 93, 93);
+}
+.food
+{
+    min-width: 200px;
+    min-height: 180px;
+    background-color: transparent;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.food:hover
+{
+    box-shadow: 5px 5px 5px   rgb(181, 169, 169);
+    animation: am 0.2s linear 1;
+}
+.about
+{
+    width: 100%;
+    min-height: 100px;
+    background-color: rgb(255, 255, 255);
+}
+#foods
+{
+    width: 235px;
+    height: 160px;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+.n
+{
+    border-color: rgb(253, 228, 4);
+}
+
+#lo
+{
+    min-width: 80px;
+    height: 25px;
+    background-color: transparent;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    color: rgb(11, 100, 242);
+}
+#bg
+{
+    text-align: center;
+    color: rgb(217, 149, 12);
+    font-family: cursive,Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+#order
+{
+    background:#000;
+    color: rgb(255, 255, 255);
+    border: 0.1px solid white;
+}
+#order:hover
+{
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(0, 0, 0);
+    border: 0.2px solid #000;
+}
+#bold{
+    color: red;   
+}
+#col
+{
+    color: green;
+}
+#line
+{
+    color: blue;
+}
+#popup
+{
+    width: 100%;
+    height: 99%;
+    background-color: transparent;
+    backdrop-filter: blur(16px);
+    animation: slide 0.25s ease-out;
+    border-radius: 0px;
+}
+.hop
+{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj
+{
+    min-width:65%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+    color: rgb(0, 0, 0);
+    border: 6px solid rgb(255, 0, 0);
+    margin-top: 100px;
+    border-radius: 12px;
+}
+#mk
+{
+    text-align: center;
+    font-family: cursive;
+    text-decoration: underline #ffffff;
+}
+#close
+{
+    width: 34px;
+    height: 22px;
+    background-image: url("mms.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+.vv
+{
+    min-width: 55%;
+    height: 53%;
+    background: linear-gradient(to right,gold,red);
+    border: 4px solid red;
+    border-radius: 5px;
+}
+footer
+{
+  display: flex; 
+  flex-direction: column; 
+  border: 3px inset rgb(17, 17, 17);
+
+}
+.abo
+{
+    width: 100%;
+    height: 90%;
+    background-image: url("cir.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    display: flex;
+    flex-direction: row;
+}
+.follow
+{
+    width: 100%;
+    height: auto;
+}
+.aaa
+{
+    width: 33%;
+    height: 100%;
+    background-color: transparent;
+}
+.bbb
+{
+    width: 33%;
+    height: 100%;
+    background-color: transparent;
+}
+.ccc
+{
+    width: 34%;
+    height: 100%;
+    background-color: transparent;
+}
+h4
+{
+    color: rgb(5, 205, 236);
+    text-align: center;
+    font-size: 18px;
+}
+#po
+{
+    width: 150px;
+    height: 150px ;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 50%;
+}
+.pro
+{
+    width: 100%;
+    height: auto;
+    
+}
+h1.but
+{
+    background: linear-gradient(to right, gold, red);
+    text-align: center;
+    font-family: cursive;
+    border: 5px solid red;
+    
+}
+
+ul{
+    list-style-type: none; 
+    background-color: #af7303;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+a
+{
+    color: #000000;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+a:hover
+{
+    background-color: #e38f11;
+    border-radius: 12px;
+}
+li
+{
+   float: left; 
+   flex-wrap: wrap;
+}
+#sea
+{
+  background: linear-gradient(to left, red, blue);
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  font-weight: 500;
+  text-align: center;
+  border: 1px double red;
+  border-radius: 16px 0px 16px 0px;
+}
+.ew
+{
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.logo
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.pho
+{
+    min-width: 35px;
+    min-height: 35px;
+    background-color:transparent;
+    margin-left: 20px;
+}
+#kol
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+}
+#kol:hover
+{
+    transform: scale(1.3);
+}
+#seemore
+{
+    background-color: #000000;
+    border: 1px double #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 103px;
+    height: 18px;
+}
+#seemore:hover
+{
+    background-color: #e38f11;
+    transform: scale(0.9);
+}
+.seemore
+{
+    width: 300px;
+    height: 65px;
+    margin-top: -25px;
+}
+@keyframes abs
+{
+0%
+{
+    background-size: 100%;
+}
+25%
+{
+    background-size: 125%;
+}
+50%
+{
+    background-size: 150%;
+}
+75%
+{
+    background-size: 125%;
+}
+100%
+{
+    background-size: 100%;
+}
+    
+}
+@keyframes am 
+{
+0%
+{
+    transform: translateX(0px);
+}
+25%
+{
+    transform: translateX(18px);
+}
+50%
+{
+    transform: translateX(0px);
+}
+75%
+{
+    transform: translateX(-18px);
+}
+100%
+{
+    transform: translateX(0px);
+}
+}
+@keyframes slide
+{
+from
+{
+    transform: translateX(-500px);
+}
+}
+@keyframes appear
+{
+from
+{
+    opacity: 0;
+    transform: scale(0.001);
+    transform: translateX(-400px);
+    background-color: #e38f11;
+}
+to
+{
+    opacity: 8;
+}
+}   
+    </style>
+</head>
+<body>
+   <header>
+    <nav>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#nop">about</a></li>
+            <li><a href="#opn">services</a></li>
+            <li><a href="">contact us</a></li>
+            <span class="ew">
+            <input type="search" id="sea" placeholder="SEARCH FOR FOODS" list="foods">
+            <datalist id="foods">
+                <option value="pasta">pasta</option>
+                <option value="chicken food">chicken food</option>
+                <option value="coffee">coffee</option>
+                <option value="milk">milk</option>
+                <option value="juice">juice</option>
+                <option value="burger">burger</option>
+                <option value="vegetable">vegetable</option>
+                <option value="mango juice">mango juice</option>
+                <option value="orange">orange</option>
+                <option value="tea">tea</option>
+                <option value="pizza">pitza</option>
+                <option value="000">unknown</option>
+               </datalist>
+            </span>
+        </ul>
+    </nav>
+    </header>
+    <div class="header">
+    <h1 id="a">😎WeLcOmE 😋tO BeLLY BolT😎</h1>
+    </div>
+   </header>
+   <hr class="n">   
+   <main class="main">
+    <div class="c">
+        <div class="food"><div class="cd"></div><img src="b.png" id="foods"><div class="cd"></div></div>
+        <div class="about"><h1 id="bg"> <hr> paella, spain food <hr><b id="bold">$ 23.12</b> <b id="line"> | </b><b id="col"> 227.33 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="c">
+        <div class="food"><img src="c.png" id="foods"></div>
+        <div class="about"><h1 id="bg"> <hr>fresh ramen, japanies food <hr><b id="bold">$ 15.20</b> <b id="line"> | </b><b id="col"> 149.90 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="c">
+        <div class="food"><img src="d.png" id="foods"></div>
+        <div class="about"><h1 id="bg"> <hr>tom yam goong, thailand<hr><b id="bold">$ 45.50</b> <b id="line"> | </b><b id="col"> 452.30 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="c">
+        <div class="food"><img src="e.png" id="foods"></div>
+        <div class="about"><h1 id="bg"> <hr>peking duck,china <hr><b id="bold">$ 60.10</b> <b id="line"> | </b><b id="col"> 598.00 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="c">
+        <div class="food"><img src="f.png" id="foods"></div>
+        <div class="about"><h1 id="bg"> <hr> steak and kidney mixed <hr><b id="bold">$ 23.12</b> <b id="line"> | </b><b id="col"> 227.33 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="c">
+        <div class="food"><img src="g.png" id="foods"></div>
+        <div class="about"><h1 id="bg"> <hr>goulash , hungary <hr><b id="bold">$ 30.25</b> <b id="line"> | </b><b id="col"> 301.00 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="c">
+        <div class="food"><img src="h.png" id="foods"></div>
+        <div class="about"><h1 id="bg"> <hr>drink makiyat <hr><b id="bold">$ 0.72</b> <b id="line"> | </b><b id="col"> 75.15 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="c">
+        <div class="food"><img src="i.png" id="foods"></div>
+        <div class="about"><h1 id="bg"> <hr> hot milk <hr><b id="bold">$ 0.22</b> <b id="line"> | </b><b id="col"> 30.25 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <center><div class="seemore"><a href="index.html" id="seemore"><button id="seemore">SEE MORE <code>>></code></button></a></div></center>
+    <div id="popup" popover>
+        <button popovertarget="popup" popovertargetaction="hide" id="close"></button>
+        <div class="hop">
+        <div class="mj">
+        <div class="pro"><center><img src="f.png" id="po"></center>
+        <h1 class="but">EtHiO bUrGeR</h1></div>
+        <div class="vv">
+        <h1 id="mk">ORDER NOW</h1><br><br><br>
+        <center><label for="r1">EMAIL:</label>
+        <input type="email" maxlength="30" minlength="6" placeholder="YOUR EMAIL"><br><br>
+        <label for="r2">PASSWORD:</label>
+        <input type="password" maxlength="20" minlength="5" placeholder="YOUR PASSWORD"><br><br>
+        <label for="io">PAYMENT METHODS:</label>
+        <select name="payment method" id="io">
+            <optgroup label="Digital wallets">  
+                <option value="paypal">paypal account</option>
+                <option value="credit">google pay</option>
+                <option value="dc">apple pay</option>
+                <option value="c">samsung pay</option>
+            </optgroup>
+            <optgroup label="credit card">
+                <option value="dc">visa</option>
+                <option value="dc">master card</option>
+                <option value="dc">american express</option>
+                <option value="dc">discover</option>
+            </optgroup>
+            <optgroup label="Bank transfer">
+                <option value="dc">ACH transfer</option>
+                <option value="dc">sepa transfer</option>
+                <option value="dc">wire transfer</option>
+            </optgroup>
+            <optgroup label="crypyo currency">
+                <option value="dc">bitcoin</option>
+                <option value="dc">ethereum</option>
+                <option value="dc">lite coin</option>
+            </optgroup>
+            <optgroup label="buy now pay later">
+                <option value="dc">affirm</option>
+                <option value="dc">afterpay</option>
+                <option value="dc">klarna</option>
+            </optgroup>
+            <optgroup label="cash and check">
+                <option value="dc">cash</option>
+                <option value="dc">check</option>
+            </optgroup>
+            
+        </select><br><br>
+        <button type="submit" id="order" onclick="abd()">ORDER NOW</button>
+        </div>    
+        </div>
+        </div>
+        </div>
+   </main>                               
+   <footer>
+    <div class="abo" id="nop">
+    <div class="aaa"><h4><br><br>FAQ <br><br>Feed Back <br><br>Head Lines <br><br>Photos <br><br>Press <br><br>Print Subscriptions <br> <br>About us <br><br>Advertising <br><br>Braking News Alert <br><br>Careers <br><br>Credit Card Payments <br><br>Digital EditionRequest <br><br> A Correction <br><br>Write For Us <br><br>RSS <br><br> Site Map <br><br>Terms Of Services <br><br>Privacy Policy</h4></div>
+    <div class="bbb"><h4><br><br>FAQ <br><br>Feed Back <br><br>Head Lines <br><br>Photos <br><br>Press <br><br>Print Subscriptions <br> <br>About us <br><br>Advertising <br><br>Braking News Alert <br><br>Careers <br><br>Credit Card Payments <br><br>Digital EditionRequest <br><br> A Correction <br><br>Write For Us <br><br>RSS <br><br> Site Map <br><br>Terms Of Services <br><br>Privacy Policy</h4></div>
+    <div class="ccc"><h4><br><br>FAQ <br><br>Feed Back <br><br>Head Lines <br><br>Photos <br><br>Press <br><br>Print Subscriptions <br> <br>About us <br><br>Advertising <br><br>Braking News Alert <br><br>Careers <br><br>Credit Card Payments <br><br>Digital EditionRequest <br><br> A Correction <br><br>Write For Us <br><br>RSS <br><br> Site Map <br><br>Terms Of Services <br><br>Privacy Policy</h4></div>
+    </div>
+    <div class="follow" id="opn"> <h4>follow us on</h4>
+    <div class="logo">
+        <div class="pho"> <a href="https://www.youtube.com"><img src="you.png"  id="kol"></a></div>
+        <div class="pho"> <a href="https://www.facebook.com"><img src="face.png" id="kol"></a></div>
+        <div class="pho"> <a href="https://www.instagram.com"><img src="inst.png" id="kol"></a></div>
+        <div class="pho"> <a href="https://www.tiktok.com"><img src="tik.png"  id="kol"></a></div>
+        <div class="pho"> <a href="https://whatsapp.com"><img src="what.png" id="kol"></a></div>
+    </div>
+</div>
+   </footer> 
+</body>
+</html>

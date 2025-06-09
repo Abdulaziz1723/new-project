@@ -1,0 +1,687 @@
+<!--created by abdulaziz-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> new updated food company</title>
+<style>
+/* the style sheet here*/
+/*ordered by abdulaziz*/
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header 
+{
+  border: 0.5px solid #dda;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(45deg, #adff2fa4,#de8f11a4);
+  backdrop-filter: blur(3px);
+  position: fixed;  /* Fixed position to keep it at the top */
+  top: 0;
+  padding: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 100;
+  transition: top 1.5s ease;  /* Smooth transition for hiding/showing */
+}
+.logo
+{
+  width: 15%;
+  height: 100%;
+  margin-left: 2.5px;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, red, blue);
+  background-clip: text;
+}
+.logo h1 
+{
+  color: transparent;
+  font-size: 24px;
+  text-align: center;
+  font-family: cursive,Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.home-button
+{
+  width: 45%;
+  margin-left: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: auto;
+  background: linear-gradient(45deg, rgb(0, 0, 255) ,rgb(243, 24, 24));
+  background-clip: text;
+}
+nav ul 
+{
+  display: flex;
+  list-style-type: none;
+}
+nav ul li a 
+{
+  color: transparent;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: cursive,Arial, Helvetica, sans-serif;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+nav ul li a:hover 
+{
+  color: rgba(252, 228, 89, 0.718);
+}
+
+/* Search Bar Styling */
+.search-container 
+{
+  width: 40%;
+  height: 100%;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+#search-bar 
+{
+  width: 250px;
+  background: linear-gradient(45deg, blue,red);
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid red;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #fff;
+}
+
+#search-btn 
+{
+  background: linear-gradient(45deg, blue ,red);
+  border: none;
+  padding: 4px 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#search-btn img
+{
+  width: 20px;
+  height: 20px;
+}
+/* Responsive Styles */
+@media (max-width: 768px) 
+{
+  header 
+  {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul
+  {
+    flex-direction: row;
+  }
+
+  nav ul li
+ {
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .search-container
+  {
+    margin-right: 10px;
+  }
+
+  #search-bar 
+  {
+    width: 90px;
+    background: linear-gradient(45deg, red,blue);
+    text-align: center;
+  }
+}
+/* Header navigation links hover effect */
+nav ul li a:hover
+{
+  color: #dda;  /* Change color on hover */
+  transform: scale(1.1);  /* Slightly enlarge the text */
+  transition: all 0.3s ease;  /* Smooth transition */
+}
+
+/* Search button hover effect */
+#search-btn:hover 
+{
+  background-color: #dda;  /* Change background on hover */
+  transform: scale(1.1);  /* Slightly enlarge the button */
+  transition: all 0.3s ease;  /* Smooth transition */
+}
+
+/* Search bar focus effect */
+#search-bar:focus 
+{
+  border: 2px solid #dda;  /* Highlight the search bar when focused */
+  outline: none;  /* Remove the default outline */
+}
+/* toogle for dark and light theme */
+.tooglecon
+{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.toogle
+{
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-top: 30px;
+}
+#dark
+{
+  width: 20px;
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: none;
+}
+#light
+{
+  width: 20px;
+  border: none;
+  background: none;
+  cursor: none;   
+}
+.dark
+{           
+   width: 20px;
+   height: 20px;
+   background-color: #1d1d1d;
+   border-radius: 50%;
+}
+.light
+{
+   width: 20px;
+   height: 20px;
+   background-color: white;
+   border-radius: 50%;
+}
+/* the main part of our website
+starts here*/
+.main
+{ 
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+}
+/* container for photo of food and price etcatera*/
+.container
+{
+   width: 400px;
+   max-width: 85%;
+   min-height: 360px;
+   background-color: transparent;
+   margin-top: 20px;
+   border: 1px double black;
+   border-radius: 16px 16px 0px 0px;
+   margin-bottom: 50px;
+   margin-left: 50px;
+   margin-right: 50px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   animation: appear linear;
+   animation-timeline: view();
+   animation-range: entry 0% cover 32%;
+}
+.food-photo-container
+{
+   margin-bottom: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+}
+.food-photo-container:hover
+{
+   box-shadow: 5px 5px 5px 0px   rgb(181, 169, 169);
+   animation: am 0.2s linear 1;
+}
+#foods-photo
+{
+   width: 250px;
+   margin-top: 20px;
+}
+.foods-name-container
+{
+   width: 100%;
+   min-height: 100px;
+   background-color: transparent;
+}
+#foods-name
+{
+   text-align: center;
+   color: rgb(217, 149, 12);
+   font-family: cursive,Arial, Helvetica, sans-serif;
+   font-size: 20px;
+}
+#price-in-dollar{
+   color: red;   
+}
+#line
+{
+   color: blue;
+}
+#price-in-birr
+{
+    color: green;
+}
+#order-button
+{
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 10px;
+}
+#order-button:hover
+{
+    background-color: #797575;
+}
+/* see more button*/
+.seemore
+{
+    width: 300px;
+    height: 65px;
+}
+#seemore
+{
+    background-color: #000;
+    color: #fff;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+}
+/* see-more-button-animation*/
+#seemore:hover
+{
+    background-color: #363333;
+}
+/* the footer starts here*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 340px;
+}
+.footer
+{
+    width: 90%;
+    height: 320px;
+    border: 2px double #000000;
+    border-radius: 100px 50px 50px 50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+#ourworks-container
+{
+    width: 80%;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, red, blue);
+    background-clip: text;
+    margin-left: 10px;
+}
+#our
+{
+    font-family: cursive,Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: transparent;
+    text-decoration: wavy;
+}
+/*this contains the list and follow us */
+.links
+{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#links-list
+{
+    width: 35%;
+    height: 150px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* words inside a list div*/
+.lists
+{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: medium;
+    margin-top: 0px;
+}
+.followus
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#folloason
+{
+    width: 80%;
+    height: 50px;
+    background: linear-gradient(45deg, #f00,#00f);
+    background-clip: text;
+    text-transform: capitalize;
+    font-family: cursive,Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #000 solid 1px;
+    border-radius: 100px;
+}
+#folo-text
+{
+    text-align: center;
+    color: transparent;
+}
+.logoes
+{
+    width: 95%;
+    height: 130px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.photo-of-logo
+{
+    width: 52px;
+    height: 52px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 5px;
+}
+#logo
+{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-size: contain ;
+}
+/* the whole animations are there*/
+@keyframes abs
+{
+0%
+{
+    background-size: 100%;
+}
+25%
+{
+    background-size: 125%;
+}
+50%
+{
+    background-size: 150%;
+}
+75%
+{
+    background-size: 125%;
+}
+100%
+{
+    background-size: 100%;
+}
+    
+}
+@keyframes am 
+{
+0%
+{
+    transform: translateX(0px);
+}
+25%
+{
+    transform: translateX(18px);
+}
+50%
+{
+    transform: translateX(0px);
+}
+75%
+{
+    transform: translateX(-18px);
+}
+100%
+{
+    transform: translateX(0px);
+}
+}
+@keyframes slide
+{
+from
+{
+    transform: translateX(-500px);
+}
+}
+@keyframes appear
+{
+from
+{
+    opacity: 0;
+    transform: scale(0.001);
+    transform: translateX(-400px);
+}
+to
+{
+    opacity: 8;
+}
+}
+</style>
+</head>
+<!-- to call in js-->
+<body id="body">
+<header id="header">
+<div class="logo">
+<h1> bolly <br>bolt </h1>
+</div>
+<div class="home-button">
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class="search-container">
+<input type="text" placeholder="Search for food..." id="search-bar">
+<button id="search-btn"><img src="https://img.icons8.com/ios/50/000000/search.png"></button>
+</div>
+</header>
+<div class="tooglecon">
+    <div class="toogle">
+    <button id="dark" onclick="dark()"><div class="dark"></div></button>
+    <button id="light" onclick="light()"><div class="light"></div></button>
+</div>
+</div>
+<main class="main">
+    <div class="container">
+        <div class="food-photo-container"><img src="b.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr> paella, spain food <hr><b id="price-in-dollar">$ 23.12</b> <b id="line"> | </b><b id="price-in-birr"> 227.33 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div> 
+    <div class="container">
+        <div class="food-photo-container"><img src="c.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr>fresh ramen, japanies food <hr><b id="price-in-dollar">$ 15.20</b> <b id="line"> | </b><b id="price-in-birr"> 149.90 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="container">
+        <div class="food-photo-container"><img src="d.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr>tom yam goong, thailand<hr><b id="price-in-dollar">$ 45.50</b> <b id="line"> | </b><b id="price-in-birr"> 452.30 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="container">
+        <div class="food-photo-container"><img src="e.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr>peking duck,china <hr><b id="price-in-dollar">$ 60.10</b> <b id="line"> | </b><b id="price-in-birr"> 598.00 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="container">
+        <div class="food-photo-container"><img src="f.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr> steak and kidney mixed <hr><b id="price-in-dollar">$ 23.12</b> <b id="line"> | </b><b id="price-in-birr"> 227.33 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="container">
+        <div class="food-photo-container"><img src="g.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr>goulash , hungary <hr><b id="price-in-dollar">$ 30.25</b> <b id="line"> | </b><b id="price-in-birr"> 301.00 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="container">
+        <div class="food-photo-container"><img src="h.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr>drink makiyat <hr><b id="price-in-dollar">$ 0.72</b> <b id="line"> | </b><b id="price-in-birr"> 75.15 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+    <div class="container">
+        <div class="food-photo-container"><img src="i.png" alt="THE PHOTO OF THE FOOD" id="foods-photo"></div>
+        <div class="foods-name-container"><h1 id="foods-name"> <hr> hot milk <hr><b id="price-in-dollar">$ 0.22</b> <b id="line"> | </b><b id="price-in-birr"> 30.25 ETB</b> <hr></h1></div>
+        <div class="order"><button id="order-button" popovertarget="popup">BUY IT NOW</button></div>
+    </div>
+</main>
+<div id="popup" popover>
+    <h1> weit our works being creating</h1>
+</div>
+<center><div class="seemore"><a href="index.html" id="seemore"><button id="seemore">SEE MORE </button></a></div></center>
+<footer>
+    <div class="footer" id="footer">
+        <div id="ourworks-container"> 
+        <h1 id="our"> OUR WORKS</h1></div>
+        <div class="links">
+        <div id="links-list">
+            <h3 class="lists">furniture works.</h3>
+            <h3 class="lists">creating blogs.</h3>
+            <h3 class="lists">creating interactive web pages.</h3>
+            <h3 class="lists">about us.</h3>
+            <h3 class="lists">privacy policy.</h3>
+        </div>
+        <div class="followus">
+            <div id="folloason"> <h2 id="folo-text">follow us on:</h2></div>
+            <div class="logoes">
+            <div class="photo-of-logo"> <a href="https://www.youtube.com"><img src="tik.png" id="logo"></a></div>
+            <div class="photo-of-logo"> <a href="https://www.youtube.com"><img src="tik.png" id="logo"></a></div>
+            <div class="photo-of-logo"> <a href="https://www.youtube.com"><img src="tik.png" id="logo"></a></div>
+            <div class="photo-of-logo"> <a href="https://www.youtube.com"><img src="tik.png" id="logo"></a></div>
+    </div>
+    </div>
+    </div>
+    </div> 
+</footer>
+<!-- the best place for enter a script is here-->
+ <script>
+
+let lastScrollTop = 0;  // To keep track of the last scroll position
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  // If scrolling down, hide the header
+  if (currentScroll > lastScrollTop) {
+    // Scroll Down
+    header.style.top = "-100px";  // Move the header up to hide it
+  } else {
+    // Scroll Up
+    header.style.top = "0";  // Bring the header back into view
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll
+});
+function dark() {
+            let a = document.getElementById("body");
+            b = document.getElementsByClassName("container");
+            c = document.getElementById("footer");
+            d = document.getElementsByClassName("lists");
+            e = document.getElementById("header");
+            f = document.getElementById("folloason");
+            g = document.getElementById("ourworks-container");
+            a.style.backgroundColor = "#1d1d1d";
+            c.style.backgroundColor = "black";
+            c.style.borderColor = "white";
+            e.style.background = "linear-gradient(45deg,#f9f9f9b3,#fdfddfb3)";
+            f.style.borderColor = "#fff";
+            g.style.borderColor = "#fff";
+            for (let i = 0; i < d.length; i++) {
+            d[i].style.color = "#fff";
+            }
+            for (let i = 0; i < b.length; i++) {
+            b[i].style.borderColor = "#fff";  
+            }
+        }
+        function light() {
+            let a = document.getElementById("body");
+            b = document.getElementsByClassName("container");
+            c = document.getElementById("footer");
+            d = document.getElementsByClassName("lists");
+            e = document.getElementById("header");
+            f = document.getElementById("folloason");
+            g = document.getElementById("ourworks-container");
+            a.style.backgroundColor = "#fff";
+            c.style.backgroundColor = "transparent";
+            c.style.borderColor = "black";
+            e.style.background = "linear-gradient(45deg, #adff2fa4,#de8f11a4)";
+            f.style.borderColor = "#000";
+             g.style.borderColor = "#000";
+            for (let i = 0; i < d.length; i++) {
+            d[i].style.color = "#000";
+            }
+            for (let i = 0; i < b.length; i++) {
+            b[i].style.borderColor = "#000";  
+            }
+        }
+ </script>
+</body>
+</html>
