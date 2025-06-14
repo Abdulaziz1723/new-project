@@ -439,21 +439,21 @@ footer{
 #h1
 {
   color: rgb(00, 255, 0);
-  background-color: #00000079;
+  background: #0000005b;
+  padding: 5px;
+  border-radius: 25px;
   font-family: cursive, 'Courier New', Courier, monospace;
   font-size: 35px;
   text-align: center;
   margin-top: -50px;
   margin-bottom: 50px;
-  text-decoration: underline;
   text-transform: capitalize;
 }
 #popo
 {
   width: 95%;
   height: 70%;
-  border: 1px solid #0f0;
-  background-color: #000000b2;
+  background-color: #000000d8;
   border-radius: 150px 80px 150px 80px;
   animation: slide 0.4s ease-in;
   display: flex;
@@ -905,9 +905,9 @@ h3
     <h1 id="h1">ordered foods</h1>
     <div id = "popo">
       <div class="price-field">
-        <div class="info"><h3 id="nooffood">number of food:</h3> <span id="fud-number">00</span></div>
-        <div class="info"><h3 id="nooffood">last food price:</h3> <span id="food-price">0.00</span><span id="food-price">$</span></div>
-        <div class="info"><h3 id="nooffood">total price:</h3> <span id="total-price">0.00</span><span id="total-price">$</span></div>
+        <div class="info"><h3 id="nooffood">number of food:</h3><span id="fud-number">00</span></div>
+        <div class="info"><h3 id="nooffood">last food price:</h3><span id="food-price" style="color: red;">$</span><span id="food-price">0.00</span></div>
+        <div class="info"><h3 id="nooffood">total price:</h3><span id="total-price" style="color: red;">$</span><span id="total-price">0.00</span></div>
       </div>
       <div class="delivery-button"> <button id="car" onclick="car()">🚚</button></div>
     </div>
