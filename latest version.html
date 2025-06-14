@@ -257,19 +257,25 @@ starts here*/
 /* see more button*/
 .seemore
 {
-    width: 300px;
-    height: 65px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    margin-top: -20px;
+    margin-bottom: 10px;
+
 }
 #seemore
 {
     background-color: #000;
     color: #fff;
     font-family: cursive, Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 /* see-more-button-animation*/
 #seemore:hover
 {
     background-color: #363333;
+    transition: ease 0.3s all;
 }
 /* the footer starts here*/
 footer{
@@ -284,7 +290,7 @@ footer{
 {
     width: 90%;
     height: 320px;
-    border: 2px double #000000;
+    border: 2px solid #000000;
     border-radius: 100px 50px 50px 50px ;
     display: flex;
     justify-content: center;
@@ -690,10 +696,7 @@ to
     opacity: 8;
 }
 }
-
-
 /* Responsive Styles */
-
 @media (max-width: 600px) 
 {
   header 
@@ -804,7 +807,7 @@ h3
 }
 .lists
 {
-  margin: 6px;
+  margin: 4px;
 }
 }
 </style>
